@@ -1,12 +1,12 @@
 {
-	"name": "Deep Space Robots",
-	"short_name": "Deep Space Robots",
+	"name": "Letourneau Civil Construction",
+	"short_name": "Letourneau Civil Construction",
 	"display": "fullscreen",
 	"scope": "/",
 	"start_url": "/index.html",
 	"background_color": "#131e29",
 	"theme_color": "#a35406",
-	"description": "A digital creative agency in Dallas, TX. We craft compelling online experiences to help you achieve your organization's goals.",
+	"description": "Excavation, concrete, and grading services in St Albans Vermont and beyond.",
 	"icons": [
 		{
 			"src": "/assets/favicon/favicon-192.png",
