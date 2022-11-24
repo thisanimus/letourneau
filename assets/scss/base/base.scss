@@ -1,0 +1,39 @@
+:root {
+	--color-primary: #ad5702;
+	--color-primary-muted: #bc7024;
+	--color-primary-intense: #a24d10;
+
+	--color-dark: #131e29;
+	--color-dark-intense: #10171e;
+	--color-dark-muted: #1b2733;
+
+	--color-secondary-muted: #203346;
+	--color-secondary: #152535;
+	--color-secondary-intense: #131e29;
+
+	--color-accent-muted: #7a97ab;
+	--color-accent: #7a97ab;
+	--color-accent-intense: #7a97ab;
+
+	--color-link-default: #e79746;
+	--color-link-hover: #ffba75;
+
+	--border-radius: 0.25rem;
+	--border-width: 2px;
+
+	--font-sans: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+		Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font-display: "Built Titling", Impact, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	margin: auto 0;
+	color: var(--color-text);
+	background-color: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}

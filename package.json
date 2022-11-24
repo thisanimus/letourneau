@@ -1,0 +1,32 @@
+{
+	"name": "deepspace-blog",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"watch:eleventy": "npx @11ty/eleventy --serve",
+		"watch:sass": "npx sass assets/scss/style.scss:assets/css/style.css --style=compressed --watch",
+		"watch:rollup": "npx rollup -c --watch",
+		"start": "npm run watch:sass & npm run watch:rollup & npm run watch:eleventy",
+		"windows-start": "concurrently npm:watch:*"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "latest",
+		"@11ty/eleventy-img": "latest",
+		"@rollup/plugin-node-resolve": "latest",
+		"@rollup/plugin-replace": "latest",
+		"@rollup/plugin-terser": "latest",
+		"autoprefixer": "latest",
+		"baselayer.css": "latest",
+		"concurrently": "latest",
+		"dotenv": "latest",
+		"rollup": "latest",
+		"sass": "latest"
+	},
+	"dependencies": {
+		"blaze-slider": "latest"
+	}
+}

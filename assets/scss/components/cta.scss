@@ -1,0 +1,26 @@
+.cta {
+	background: linear-gradient(to top, var(--color-primary), var(--color-primary-intense));
+	position: relative;
+	--color-ui: #fff;
+}
+.cta-content {
+	position: relative;
+	z-index: 1;
+	padding: 8rem var(--space-md) 10rem var(--space-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	@include md-and-up {
+		flex-direction: row;
+		gap: var(--space-lg);
+		> * {
+			width: 50%;
+		}
+	}
+}
+.grit {
+	pointer-events: none;
+	@extend %absolute-fill;
+	background-image: url(../img/asfalt-dark.png);
+	mix-blend-mode: overlay;
+}

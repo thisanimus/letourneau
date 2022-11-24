@@ -1,0 +1,176 @@
+header {
+	position: relative;
+	color: var(--color-dark-intense);
+	min-height: 50rem;
+
+	@include md-and-up {
+		min-height: 36rem;
+	}
+
+	h1 {
+		font-size: clamp(3rem, 2rem + 4vw, 3.5rem);
+		max-width: 11em;
+	}
+	.home-header-text {
+		padding: var(--space-md) 0;
+		position: relative;
+		z-index: 1;
+	}
+	.logo {
+		img {
+			width: 8rem;
+			margin-bottom: var(--space-md);
+		}
+	}
+	.header-home-background {
+		img {
+			mix-blend-mode: lighten;
+			@extend %absolute-fill;
+			z-index: 0;
+			object-fit: cover;
+			object-position: 80% 100%;
+		}
+	}
+	.fade {
+		@extend %absolute-fill;
+		background: linear-gradient(
+			to top,
+			var(--color-background) 0,
+			transparent 40%,
+			transparent 60%,
+			var(--color-light) 100%
+		);
+	}
+}
+.service-layout {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	@include md-and-up {
+		flex-direction: row;
+		gap: var(--space-lg);
+		.service-info {
+			width: 60%;
+		}
+		.services-list {
+			width: 40%;
+		}
+	}
+}
+
+.services-list {
+	font-size: 0.85rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	.service {
+		display: grid;
+		grid-template-areas: "icon title" "icon description";
+		grid-template-columns: 2rem 1fr;
+		gap: 0 var(--space-sm);
+	}
+	.service-icon {
+		grid-area: icon;
+		font-size: 3rem;
+		line-height: 0.5;
+	}
+	.service-title {
+		grid-area: title;
+		margin: 0;
+	}
+	.service-description {
+		grid-area: description;
+		margin: 0;
+	}
+}
+.about {
+	margin-top: var(--space-lg);
+
+	position: relative;
+	overflow: hidden;
+
+	.about-background img {
+		position: absolute;
+		object-fit: cover;
+		height: 50vw;
+		left: 0;
+		@include md-and-up {
+			height: 100%;
+			width: auto;
+			object-fit: cover;
+			right: 0;
+			left: unset;
+		}
+	}
+	.about-content {
+		max-width: 45ch;
+	}
+	figcaption {
+		margin-top: 50vw;
+		margin-bottom: var(--space-lg);
+		position: relative;
+		z-index: 1;
+		@include md-and-up {
+			padding: var(--space-lg) 0;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	.fade {
+		@extend %absolute-fill;
+		background: linear-gradient(to bottom, transparent 0, var(--color-background-intense) 50vw);
+		@include md-and-up {
+			background: linear-gradient(to left, transparent 0, var(--color-background-intense) 70vw);
+		}
+		@include lg-and-up {
+			background: linear-gradient(to left, transparent 0, var(--color-background-intense) 40rem);
+		}
+	}
+}
+
+.service-area {
+	margin-top: var(--space-lg);
+	margin-bottom: var(--space-lg);
+	display: flex;
+	gap: var(--space-md);
+	flex-direction: column;
+	@include md-and-up {
+		gap: var(--space-lg);
+		flex-direction: row-reverse;
+		> * {
+			width: 50%;
+		}
+	}
+	.map {
+		position: relative;
+		min-height: 14rem;
+	}
+}
+.service-area-content {
+	@include md-and-up {
+		margin: var(--space-lg) 0;
+	}
+}
+.service-area-background img {
+	@extend %absolute-fill;
+	mix-blend-mode: screen;
+	object-fit: cover;
+}
+.towns {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+	gap: 0.5rem;
+
+	> * {
+		text-align: center;
+		font-size: 0.9rem;
+		font-weight: 600;
+		min-width: 0;
+		background: var(--color-background-muted);
+		padding: 0.5rem;
+	}
+}
+.quotes {
+	margin-top: var(--space-lg);
+	margin-bottom: var(--space-lg);
+}

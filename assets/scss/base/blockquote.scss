@@ -1,0 +1,61 @@
+.title-wrapper {
+	display: flex;
+	gap: var(--space-sm);
+}
+button.blaze-prev,
+button.blaze-next {
+	all: unset;
+	cursor: pointer;
+	font-size: 2rem;
+	opacity: 0.75;
+	line-height: 1.25;
+	transition: opacity 250ms;
+	&:hover {
+		opacity: 1;
+	}
+}
+.review {
+	border: none;
+	position: relative;
+	background: none;
+	padding: var(--space-md) clamp(0rem, 10vw - 4rem, 8rem);
+	display: flex;
+	justify-content: center;
+	gap: var(--space-sm);
+	margin: 0;
+	&:not(:first-child) {
+		margin: 0;
+	}
+
+	.quote {
+		font-size: 1.25rem;
+	}
+	.quote-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.big-quote {
+		position: absolute;
+		opacity: 0.2;
+		color: var(--color-primary);
+		font-family: var(--font-display);
+		font-size: 18rem;
+		line-height: 1;
+		left: 0;
+		top: 0;
+		z-index: 0;
+	}
+	cite {
+		text-align: right;
+	}
+	.review-customer {
+		font-weight: 800;
+		line-height: 1.2;
+	}
+	.review-location {
+		font-size: 0.8rem;
+		font-weight: 600;
+		opacity: 0.75;
+	}
+}

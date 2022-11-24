@@ -1,0 +1,30 @@
+<div class="cta alignfull">
+    <div class="grit"></div>
+    <div class="cta-content alignwide">
+        <div>
+            <h2>Got a project in mind?</h2>
+            <p>Fill out the form and let us know what you need.  The more detail you can give us, the easier it will be for us to get you an accurate quote.</p>
+        </div>
+        <form name="contact" method="POST" data-netlify="true">
+            <div class="form-row">
+                <label>Name*
+                    <input type="text" name="name" placeholder="Jane Smith" required />
+                </label>
+
+                <label>Phone*
+                    <input type="tel" name="phone" placeholder="(802) 123-4567" required />
+                </label>
+            </div>
+
+            <label>Files
+                <input type="file" name="files" multiple accept="application/pdf,image/*,.pdf,.dwg"/>
+            </label>
+
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project." required></textarea>
+
+            <button class="button button-secondary" type="submit">Submit</button>
+        </form>
+        
+    </div>
+</div>

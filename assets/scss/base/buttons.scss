@@ -1,0 +1,19 @@
+.button-group {
+	align-items: center;
+}
+.button,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	font-size: 1rem;
+	height: 3rem;
+	padding: 0.9rem 1.5rem;
+	svg {
+		display: inline-block;
+		height: 1rem;
+		width: 1rem;
+		object-fit: contain;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,130 @@
+---
+layout: base.liquid
+title: Letourneau Civil Construction
+description: Excavation, concrete, and grading services in St Albans Vermont and beyond.
+services:
+  - title: Site Preparation
+    description: Brush clearing, grubbing, excavation/site prep, grading.
+  - title: Foundations
+    description: Excavation and site prep. Concrete formwork, reinforcement, and pouring.
+  - title: Driveways
+    description: Grading and site prep. Road subsurface and surface installation.
+reviews:
+  - quote: Firstname was a pleasure to work with.  He really knows what he's doing and he works hard to get the job done right.
+    customer: Andrew
+    location: St. Albans, VT
+towns:
+  - St Albans
+  - Swanton
+  - Highgate
+  - Franklin
+  - Enosburg
+  - Sheldon
+  - Fairfield
+  - Bakersfield
+  - Fletcher
+  - Fairfax
+  - Gerogia
+  - Milton
+  - Wesford
+  - Colchester
+---
+<header class="alignfull layout">
+ {% image 'excavator.jpg', 'A dramatic picture of an excavator in the fog.', 'header-home-background'%}
+
+
+
+<div class="home-header-text alignwide">
+   
+    {% image 'letourneau-logo.svg', 'logo', 'logo'%}
+    
+    <h1>Quality Civil Construction<br>in Northwest Vermont</h1>
+    <h2>Let's get to work:</h2>
+    <a class="button" href="tel:+18025555555">{% icon 'phone-fill.svg' %} (802) 555-5555</a>
+</div>
+
+</header>
+<section class="alignwide services">
+    <h2>What We <span class="highlight">Do</span></h2>
+    <div class="service-layout">
+        <div class="service-info">
+            <p>Letourneau Civil Construction is based in St. Albans and serves communities all over Northwestern Vermont. We have years of experience in both commercial and residential construction. We are committed to a high standard of quality and integrity in our workmanship and relationships.</p>
+            <p>Whether you need a small shed foundation, a full basement, or grading for an entire construction site, we have the skill and experience to get the job done right.  Call us today to get a free consultation and quote for your project.</p>
+        </div>
+        <div class="services-list">
+            {% for service in services %}
+                <div class="service">
+                    <div class="service-icon highlight">⚒</div>
+                    <h3 class="service-title">{{ service.title }}</h3>
+                    <p class="service-descritption">{{ service.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="alignfull about">
+<figure class="layout">
+   {% image 'team.jpg', 'photo of man', 'about-background'%}
+   <div class="fade alignfull"></div>
+   <figcaption class="alignwide">
+    <div class="about-content">
+        <h2>About <span class="highlight">Letourneau Construction</span></h2>
+        <p>Short ribs brisket venison rump drumstick pig sausage prosciutto chicken spare ribs salami picanha doner. Kevin capicola sausage, buffalo bresaola venison turkey shoulder picanha ham pork tri-tip meatball meatloaf ribeye. Doner spare ribs andouille bacon sausage. Ground round jerky brisket pastrami shank.</p>
+    </div>
+   </figcaption>
+</figure>
+<div class="grit"></div>
+</section>
+
+<section class="alignwide service-area">
+    <div class="map">
+     {% image 'satellite.jpg', 'photo of man', 'service-area-background'%}
+   </div>
+   
+    <div class="service-area-content">
+        <h2>We Serve <span class="highlight">Northwestern Vermont</span></h2>
+       <ul class="towns">
+       {% for town in towns %}
+        <li>{{ town }}</li>
+       {% endfor %}
+       </ul>
+    </div>
+ 
+</figure>
+</section>
+<hr class="alignwide">
+<section class="alignwide quotes">
+    
+    <div class="blaze-slider review-slider">
+        <div class="title-wrapper">
+            <h2>Customer <span class="highlight">Reviews</span></h2>
+            <div class="slider-controls">
+                <button title="previous" class="blaze-prev">&#10094;</button>
+                <button title="next"  class="blaze-next">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="blaze-container">
+            <div class="blaze-track-container">
+                <div class="blaze-track">
+                    {% for review in reviews %}
+                        <blockquote class="review">
+                            <div class="big-quote">“</div>
+                            <div class="quote-content">
+                                <p class="quote">{{ review.quote }}</p>
+                                <cite>
+                                    <div class="review-customer">{{ review.customer }}</div>
+                                    <div class="review-location">{{ review.location }}</div> 
+                                </cite>
+                            </div>
+                        </blockquote>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+</section>
+{% include 'cta' %}
